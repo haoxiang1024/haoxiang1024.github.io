@@ -223,7 +223,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          414 字
+          460 字
         
       </span>
     
@@ -289,36 +289,36 @@
             
               <div class="markdown-body">
                 
-                <h1 id="linux初次安装配置"><a href="#linux初次安装配置" class="headerlink" title="linux初次安装配置"></a>linux初次安装配置</h1><h2 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h2><p>由于经常要使用到linux环境，所以记录一下初次安装linux需要的配置<br>发行版环境:<code>Ubuntu 24.04 lts</code></p>
-<h2 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h2><ol>
-<li><a href="#%E5%AE%89%E8%A3%85Linux">安装Linux</a></li>
-<li><a href="#%E9%A6%96%E6%AC%A1root%E5%AF%86%E7%A0%81%E8%AE%BE%E7%BD%AE">首次root密码设置</a></li>
-<li><a href="#ssh%E9%85%8D%E7%BD%AE%E7%99%BB%E5%BD%95">ssh配置登录</a></li>
+                <h1 id="linux&#x521D;&#x6B21;&#x5B89;&#x88C5;&#x914D;&#x7F6E;"><a href="#linux&#x521D;&#x6B21;&#x5B89;&#x88C5;&#x914D;&#x7F6E;" class="headerlink" title="linux&#x521D;&#x6B21;&#x5B89;&#x88C5;&#x914D;&#x7F6E;"></a>linux&#x521D;&#x6B21;&#x5B89;&#x88C5;&#x914D;&#x7F6E;</h1><h2 id="&#x4ECB;&#x7ECD;"><a href="#&#x4ECB;&#x7ECD;" class="headerlink" title="&#x4ECB;&#x7ECD;"></a>&#x4ECB;&#x7ECD;</h2><p>&#x7531;&#x4E8E;&#x7ECF;&#x5E38;&#x8981;&#x4F7F;&#x7528;&#x5230;linux&#x73AF;&#x5883;&#xFF0C;&#x6240;&#x4EE5;&#x8BB0;&#x5F55;&#x4E00;&#x4E0B;&#x521D;&#x6B21;&#x5B89;&#x88C5;linux&#x9700;&#x8981;&#x7684;&#x914D;&#x7F6E;<br>&#x53D1;&#x884C;&#x7248;&#x73AF;&#x5883;:<code>Ubuntu 24.04 lts</code></p>
+<h2 id="&#x76EE;&#x5F55;"><a href="#&#x76EE;&#x5F55;" class="headerlink" title="&#x76EE;&#x5F55;"></a>&#x76EE;&#x5F55;</h2><ol>
+<li><a href="#%E5%AE%89%E8%A3%85Linux">&#x5B89;&#x88C5;Linux</a></li>
+<li><a href="#%E9%A6%96%E6%AC%A1root%E5%AF%86%E7%A0%81%E8%AE%BE%E7%BD%AE">&#x9996;&#x6B21;root&#x5BC6;&#x7801;&#x8BBE;&#x7F6E;</a></li>
+<li><a href="#ssh%E9%85%8D%E7%BD%AE%E7%99%BB%E5%BD%95">ssh&#x914D;&#x7F6E;&#x767B;&#x5F55;</a></li>
 </ol>
-<h2 id="安装Linux"><a href="#安装Linux" class="headerlink" title="安装Linux"></a>安装Linux</h2><p>本次只演示安装linux之后的配置，要重新安装linux请参考<a target="_blank" rel="noopener" href="https://www.sysgeek.cn/install-ubuntu-24-04-lts/" title="安装 Ubuntu">如何安装 Ubuntu 24.04 LTS 桌面版或服务器</a></p>
-<h2 id="首次root密码设置"><a href="#首次root密码设置" class="headerlink" title="首次root密码设置"></a>首次root密码设置</h2><p><code>sudo passwd root</code>#回车</p>
-<figure class="highlight nix"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs nix">[sudo] password for <span class="hljs-params">kerwin:</span> <span class="hljs-comment">#输入当前用户密码</span><br>New <span class="hljs-params">password:</span> <span class="hljs-comment">#输入root新密码</span><br>Retype new <span class="hljs-params">password:</span> <span class="hljs-comment">#再次输入root密码</span><br><span class="hljs-params">passwd:</span> password updated successfully <span class="hljs-comment">#密码更新成功</span><br></code></pre></td></tr></table></figure>
-<p>root密码设置完成了，输入<code>su root</code> 切换到root用户，能切换到证明修改成功</p>
-<h2 id="ssh配置登录"><a href="#ssh配置登录" class="headerlink" title="ssh配置登录"></a>ssh配置登录</h2><h3 id="ssh服务安装"><a href="#ssh服务安装" class="headerlink" title="ssh服务安装"></a>ssh服务安装</h3><p>首先，确保系统已经安装了SSH服务。可以使用以下命令安装openssh-server：</p>
+<h2 id="&#x5B89;&#x88C5;Linux"><a href="#&#x5B89;&#x88C5;Linux" class="headerlink" title="&#x5B89;&#x88C5;Linux"></a>&#x5B89;&#x88C5;Linux</h2><p>&#x672C;&#x6B21;&#x53EA;&#x6F14;&#x793A;&#x5B89;&#x88C5;linux&#x4E4B;&#x540E;&#x7684;&#x914D;&#x7F6E;&#xFF0C;&#x8981;&#x91CD;&#x65B0;&#x5B89;&#x88C5;linux&#x8BF7;&#x53C2;&#x8003;<a target="_blank" rel="noopener" href="https://www.sysgeek.cn/install-ubuntu-24-04-lts/" title="&#x5B89;&#x88C5; Ubuntu">&#x5982;&#x4F55;&#x5B89;&#x88C5; Ubuntu 24.04 LTS &#x684C;&#x9762;&#x7248;&#x6216;&#x670D;&#x52A1;&#x5668;</a></p>
+<h2 id="&#x9996;&#x6B21;root&#x5BC6;&#x7801;&#x8BBE;&#x7F6E;"><a href="#&#x9996;&#x6B21;root&#x5BC6;&#x7801;&#x8BBE;&#x7F6E;" class="headerlink" title="&#x9996;&#x6B21;root&#x5BC6;&#x7801;&#x8BBE;&#x7F6E;"></a>&#x9996;&#x6B21;root&#x5BC6;&#x7801;&#x8BBE;&#x7F6E;</h2><p><code>sudo passwd root</code>#&#x56DE;&#x8F66;</p>
+<figure class="highlight nix"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs nix">[sudo] password for <span class="hljs-params">kerwin:</span> <span class="hljs-comment">#&#x8F93;&#x5165;&#x5F53;&#x524D;&#x7528;&#x6237;&#x5BC6;&#x7801;</span><br>New <span class="hljs-params">password:</span> <span class="hljs-comment">#&#x8F93;&#x5165;root&#x65B0;&#x5BC6;&#x7801;</span><br>Retype new <span class="hljs-params">password:</span> <span class="hljs-comment">#&#x518D;&#x6B21;&#x8F93;&#x5165;root&#x5BC6;&#x7801;</span><br><span class="hljs-params">passwd:</span> password updated successfully <span class="hljs-comment">#&#x5BC6;&#x7801;&#x66F4;&#x65B0;&#x6210;&#x529F;</span><br></code></pre></td></tr></table></figure>
+<p>root&#x5BC6;&#x7801;&#x8BBE;&#x7F6E;&#x5B8C;&#x6210;&#x4E86;&#xFF0C;&#x8F93;&#x5165;<code>su root</code> &#x5207;&#x6362;&#x5230;root&#x7528;&#x6237;&#xFF0C;&#x80FD;&#x5207;&#x6362;&#x5230;&#x8BC1;&#x660E;&#x4FEE;&#x6539;&#x6210;&#x529F;</p>
+<h2 id="ssh&#x914D;&#x7F6E;&#x767B;&#x5F55;"><a href="#ssh&#x914D;&#x7F6E;&#x767B;&#x5F55;" class="headerlink" title="ssh&#x914D;&#x7F6E;&#x767B;&#x5F55;"></a>ssh&#x914D;&#x7F6E;&#x767B;&#x5F55;</h2><h3 id="ssh&#x670D;&#x52A1;&#x5B89;&#x88C5;"><a href="#ssh&#x670D;&#x52A1;&#x5B89;&#x88C5;" class="headerlink" title="ssh&#x670D;&#x52A1;&#x5B89;&#x88C5;"></a>ssh&#x670D;&#x52A1;&#x5B89;&#x88C5;</h3><p>&#x9996;&#x5148;&#xFF0C;&#x786E;&#x4FDD;&#x7CFB;&#x7EDF;&#x5DF2;&#x7ECF;&#x5B89;&#x88C5;&#x4E86;SSH&#x670D;&#x52A1;&#x3002;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x4EE5;&#x4E0B;&#x547D;&#x4EE4;&#x5B89;&#x88C5;openssh-server&#xFF1A;</p>
 <p><code>sudo apt-get install openssh-server</code></p>
-<p>安装完成后，可以使用以下命令启动SSH服务：</p>
+<p>&#x5B89;&#x88C5;&#x5B8C;&#x6210;&#x540E;&#xFF0C;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x4EE5;&#x4E0B;&#x547D;&#x4EE4;&#x542F;&#x52A8;SSH&#x670D;&#x52A1;&#xFF1A;</p>
 <p><code>sudo /etc/init.d/ssh start</code></p>
-<p>为了确保SSH服务在系统启动时自动启动，可以使用systemctl命令:</p>
+<p>&#x4E3A;&#x4E86;&#x786E;&#x4FDD;SSH&#x670D;&#x52A1;&#x5728;&#x7CFB;&#x7EDF;&#x542F;&#x52A8;&#x65F6;&#x81EA;&#x52A8;&#x542F;&#x52A8;&#xFF0C;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;systemctl&#x547D;&#x4EE4;:</p>
 <p><code>sudo systemctl enable ssh</code></p>
-<p>设置完成后，可以重启系统以确保设置生效：</p>
+<p>&#x8BBE;&#x7F6E;&#x5B8C;&#x6210;&#x540E;&#xFF0C;&#x53EF;&#x4EE5;&#x91CD;&#x542F;&#x7CFB;&#x7EDF;&#x4EE5;&#x786E;&#x4FDD;&#x8BBE;&#x7F6E;&#x751F;&#x6548;&#xFF1A;</p>
 <p><code>reboot</code></p>
-<p><code>systemctl</code>相关命令：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment"># 单次启动SSH服务</span><br><span class="hljs-built_in">sudo</span> systemctl start ssh<br><span class="hljs-comment"># 单次关闭SSH服务</span><br><span class="hljs-built_in">sudo</span> systemctl stop ssh<br><span class="hljs-comment"># 设置SSH开机自启</span><br><span class="hljs-built_in">sudo</span> systemctl <span class="hljs-built_in">enable</span> ssh<br><span class="hljs-comment"># 关闭SSH开机自启</span><br><span class="hljs-built_in">sudo</span> systemctl <span class="hljs-built_in">disable</span> ssh<br></code></pre></td></tr></table></figure>
-<h3 id="开启root远程登陆"><a href="#开启root远程登陆" class="headerlink" title="开启root远程登陆"></a>开启root远程登陆</h3><p>需要修改SSH的配置文件以允许root用户登录。使用文本编辑器打开<code>/etc/ssh/sshd_config</code>文件：</p>
+<p><code>systemctl</code>&#x76F8;&#x5173;&#x547D;&#x4EE4;&#xFF1A;</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment"># &#x5355;&#x6B21;&#x542F;&#x52A8;SSH&#x670D;&#x52A1;</span><br><span class="hljs-built_in">sudo</span> systemctl start ssh<br><span class="hljs-comment"># &#x5355;&#x6B21;&#x5173;&#x95ED;SSH&#x670D;&#x52A1;</span><br><span class="hljs-built_in">sudo</span> systemctl stop ssh<br><span class="hljs-comment"># &#x8BBE;&#x7F6E;SSH&#x5F00;&#x673A;&#x81EA;&#x542F;</span><br><span class="hljs-built_in">sudo</span> systemctl <span class="hljs-built_in">enable</span> ssh<br><span class="hljs-comment"># &#x5173;&#x95ED;SSH&#x5F00;&#x673A;&#x81EA;&#x542F;</span><br><span class="hljs-built_in">sudo</span> systemctl <span class="hljs-built_in">disable</span> ssh<br></code></pre></td></tr></table></figure>
+<h3 id="&#x5F00;&#x542F;root&#x8FDC;&#x7A0B;&#x767B;&#x9646;"><a href="#&#x5F00;&#x542F;root&#x8FDC;&#x7A0B;&#x767B;&#x9646;" class="headerlink" title="&#x5F00;&#x542F;root&#x8FDC;&#x7A0B;&#x767B;&#x9646;"></a>&#x5F00;&#x542F;root&#x8FDC;&#x7A0B;&#x767B;&#x9646;</h3><p>&#x9700;&#x8981;&#x4FEE;&#x6539;SSH&#x7684;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x4EE5;&#x5141;&#x8BB8;root&#x7528;&#x6237;&#x767B;&#x5F55;&#x3002;&#x4F7F;&#x7528;&#x6587;&#x672C;&#x7F16;&#x8F91;&#x5668;&#x6253;&#x5F00;<code>/etc/ssh/sshd_config</code>&#x6587;&#x4EF6;&#xFF1A;</p>
 <p><code>sudo vi /etc/ssh/sshd_config</code></p>
-<p>找到以下配置项并修改：</p>
-<figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs nginx"><span class="hljs-attribute">PermitRootLogin</span> <span class="hljs-literal">yes</span> <span class="hljs-comment"># 允许root用户登录</span><br>PasswordAuthentication <span class="hljs-literal">yes</span> <span class="hljs-comment"># 允许密码登录</span><br></code></pre></td></tr></table></figure>
+<p>&#x627E;&#x5230;&#x4EE5;&#x4E0B;&#x914D;&#x7F6E;&#x9879;&#x5E76;&#x4FEE;&#x6539;&#xFF1A;</p>
+<figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs nginx"><span class="hljs-attribute">PermitRootLogin</span> <span class="hljs-literal">yes</span> <span class="hljs-comment"># &#x5141;&#x8BB8;root&#x7528;&#x6237;&#x767B;&#x5F55;</span><br>PasswordAuthentication <span class="hljs-literal">yes</span> <span class="hljs-comment"># &#x5141;&#x8BB8;&#x5BC6;&#x7801;&#x767B;&#x5F55;</span><br></code></pre></td></tr></table></figure>
 
-<p>修改完成后，需要重启SSH服务以使配置生效：</p>
+<p>&#x4FEE;&#x6539;&#x5B8C;&#x6210;&#x540E;&#xFF0C;&#x9700;&#x8981;&#x91CD;&#x542F;SSH&#x670D;&#x52A1;&#x4EE5;&#x4F7F;&#x914D;&#x7F6E;&#x751F;&#x6548;&#xFF1A;</p>
 <p><code>sudo systemctl restart sshd</code></p>
-<p>最后使用ssh连接工具进行连接，推荐使用<a target="_blank" rel="noopener" href="https://github.com/RipplePiam/MobaXterm-Chinese-Simplified/releases" title="MobaXterm汉化版">MobaXterm汉化版</a></p>
-<p><strong>注意是从github下载ssh工具MobaXterm汉化版</strong></p>
-<p>到此配置完成。</p>
+<p>&#x6700;&#x540E;&#x4F7F;&#x7528;ssh&#x8FDE;&#x63A5;&#x5DE5;&#x5177;&#x8FDB;&#x884C;&#x8FDE;&#x63A5;&#xFF0C;&#x63A8;&#x8350;&#x4F7F;&#x7528;<a target="_blank" rel="noopener" href="https://github.com/RipplePiam/MobaXterm-Chinese-Simplified/releases" title="MobaXterm&#x6C49;&#x5316;&#x7248;">MobaXterm&#x6C49;&#x5316;&#x7248;</a></p>
+<p><strong>&#x6CE8;&#x610F;&#x662F;&#x4ECE;github&#x4E0B;&#x8F7D;ssh&#x5DE5;&#x5177;MobaXterm&#x6C49;&#x5316;&#x7248;</strong></p>
+<p>&#x5230;&#x6B64;&#x914D;&#x7F6E;&#x5B8C;&#x6210;&#x3002;</p>
 
                 
               </div>
