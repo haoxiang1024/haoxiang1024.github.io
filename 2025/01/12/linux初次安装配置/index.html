@@ -19,21 +19,22 @@
   <meta name="author" content="haoxiang">
   <meta name="keywords" content="">
   
-    <meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+    <meta name="description" content="由于经常要使用到linux环境，所以记录一下初次安装linux需要的配置">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="http://example.com/2025/01/12/hello-world/index.html">
+<meta property="og:title" content="linux初次安装配置">
+<meta property="og:url" content="http://example.com/2025/01/12/linux%E5%88%9D%E6%AC%A1%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE/index.html">
 <meta property="og:site_name" content="haoxiang的博客">
-<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta property="og:description" content="由于经常要使用到linux环境，所以记录一下初次安装linux需要的配置">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2025-01-12T14:13:23.709Z">
-<meta property="article:modified_time" content="2025-01-12T14:13:23.709Z">
+<meta property="article:published_time" content="2025-01-12T11:08:26.000Z">
+<meta property="article:modified_time" content="2025-01-12T14:35:51.006Z">
 <meta property="article:author" content="haoxiang">
+<meta property="article:tag" content="Linux,Ubuntu">
 <meta name="twitter:card" content="summary_large_image">
   
   
   
-  <title>Hello World - haoxiang的博客</title>
+  <title>linux初次安装配置 - haoxiang的博客</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -199,7 +200,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="Hello World"></span>
+            <span id="subtitle" data-typed-text="linux初次安装配置"></span>
           
         </div>
 
@@ -210,7 +211,7 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2025-01-12 22:13" pubdate>
+        <time datetime="2025-01-12 19:08" pubdate>
           2025年1月12日 晚上
         </time>
       </span>
@@ -222,7 +223,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          18 字
+          414 字
         
       </span>
     
@@ -233,7 +234,7 @@
         
         
         
-          1 分钟
+          4 分钟
         
       </span>
     
@@ -283,24 +284,41 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">Hello World</h1>
+            <h1 id="seo-header">linux初次安装配置</h1>
             
             
               <div class="markdown-body">
                 
-                <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo new <span class="hljs-string">&quot;My New Post&quot;</span><br></code></pre></td></tr></table></figure>
+                <h1 id="linux初次安装配置"><a href="#linux初次安装配置" class="headerlink" title="linux初次安装配置"></a>linux初次安装配置</h1><h2 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h2><p>由于经常要使用到linux环境，所以记录一下初次安装linux需要的配置<br>发行版环境:<code>Ubuntu 24.04 lts</code></p>
+<h2 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h2><ol>
+<li><a href="#%E5%AE%89%E8%A3%85Linux">安装Linux</a></li>
+<li><a href="#%E9%A6%96%E6%AC%A1root%E5%AF%86%E7%A0%81%E8%AE%BE%E7%BD%AE">首次root密码设置</a></li>
+<li><a href="#ssh%E9%85%8D%E7%BD%AE%E7%99%BB%E5%BD%95">ssh配置登录</a></li>
+</ol>
+<h2 id="安装Linux"><a href="#安装Linux" class="headerlink" title="安装Linux"></a>安装Linux</h2><p>本次只演示安装linux之后的配置，要重新安装linux请参考<a target="_blank" rel="noopener" href="https://www.sysgeek.cn/install-ubuntu-24-04-lts/" title="安装 Ubuntu">如何安装 Ubuntu 24.04 LTS 桌面版或服务器</a></p>
+<h2 id="首次root密码设置"><a href="#首次root密码设置" class="headerlink" title="首次root密码设置"></a>首次root密码设置</h2><p><code>sudo passwd root</code>#回车</p>
+<figure class="highlight nix"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs nix">[sudo] password for <span class="hljs-params">kerwin:</span> <span class="hljs-comment">#输入当前用户密码</span><br>New <span class="hljs-params">password:</span> <span class="hljs-comment">#输入root新密码</span><br>Retype new <span class="hljs-params">password:</span> <span class="hljs-comment">#再次输入root密码</span><br><span class="hljs-params">passwd:</span> password updated successfully <span class="hljs-comment">#密码更新成功</span><br></code></pre></td></tr></table></figure>
+<p>root密码设置完成了，输入<code>su root</code> 切换到root用户，能切换到证明修改成功</p>
+<h2 id="ssh配置登录"><a href="#ssh配置登录" class="headerlink" title="ssh配置登录"></a>ssh配置登录</h2><h3 id="ssh服务安装"><a href="#ssh服务安装" class="headerlink" title="ssh服务安装"></a>ssh服务安装</h3><p>首先，确保系统已经安装了SSH服务。可以使用以下命令安装openssh-server：</p>
+<p><code>sudo apt-get install openssh-server</code></p>
+<p>安装完成后，可以使用以下命令启动SSH服务：</p>
+<p><code>sudo /etc/init.d/ssh start</code></p>
+<p>为了确保SSH服务在系统启动时自动启动，可以使用systemctl命令:</p>
+<p><code>sudo systemctl enable ssh</code></p>
+<p>设置完成后，可以重启系统以确保设置生效：</p>
+<p><code>reboot</code></p>
+<p><code>systemctl</code>相关命令：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment"># 单次启动SSH服务</span><br><span class="hljs-built_in">sudo</span> systemctl start ssh<br><span class="hljs-comment"># 单次关闭SSH服务</span><br><span class="hljs-built_in">sudo</span> systemctl stop ssh<br><span class="hljs-comment"># 设置SSH开机自启</span><br><span class="hljs-built_in">sudo</span> systemctl <span class="hljs-built_in">enable</span> ssh<br><span class="hljs-comment"># 关闭SSH开机自启</span><br><span class="hljs-built_in">sudo</span> systemctl <span class="hljs-built_in">disable</span> ssh<br></code></pre></td></tr></table></figure>
+<h3 id="开启root远程登陆"><a href="#开启root远程登陆" class="headerlink" title="开启root远程登陆"></a>开启root远程登陆</h3><p>需要修改SSH的配置文件以允许root用户登录。使用文本编辑器打开<code>/etc/ssh/sshd_config</code>文件：</p>
+<p><code>sudo vi /etc/ssh/sshd_config</code></p>
+<p>找到以下配置项并修改：</p>
+<figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs nginx"><span class="hljs-attribute">PermitRootLogin</span> <span class="hljs-literal">yes</span> <span class="hljs-comment"># 允许root用户登录</span><br>PasswordAuthentication <span class="hljs-literal">yes</span> <span class="hljs-comment"># 允许密码登录</span><br></code></pre></td></tr></table></figure>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo server<br></code></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo generate<br></code></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo deploy<br></code></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+<p>修改完成后，需要重启SSH服务以使配置生效：</p>
+<p><code>sudo systemctl restart sshd</code></p>
+<p>最后使用ssh连接工具进行连接，推荐使用<a target="_blank" rel="noopener" href="https://github.com/RipplePiam/MobaXterm-Chinese-Simplified/releases" title="MobaXterm汉化版">MobaXterm汉化版</a></p>
+<p><strong>注意是从github下载ssh工具MobaXterm汉化版</strong></p>
+<p>到此配置完成。</p>
 
                 
               </div>
@@ -309,6 +327,34 @@
             <div>
               <div class="post-metas my-3">
   
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/linux%E4%BD%BF%E7%94%A8/" class="category-chain-item">linux使用</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/Linux-Ubuntu/" class="print-no-link">#Linux,Ubuntu</a>
+      
+    </div>
   
 </div>
 
@@ -318,8 +364,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>Hello World</div>
-      <div>http://example.com/2025/01/12/hello-world/</div>
+      <div>linux初次安装配置</div>
+      <div>http://example.com/2025/01/12/linux初次安装配置/</div>
     </div>
     <div class="license-meta">
       
@@ -363,12 +409,18 @@
                   <article class="post-prev col-6">
                     
                     
+                      <a href="/2025/01/12/hello-world/" title="Hello World">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">Hello World</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2025/01/12/linux%E5%88%9D%E6%AC%A1%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE/" title="linux初次安装配置">
-                        <span class="hidden-mobile">linux初次安装配置</span>
+                      <a href="/2025/01/06/Hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA-Fluid%E4%B8%BB%E9%A2%98-CloudFlare%E6%89%98%E7%AE%A1/" title="Hexo博客搭建+Fluid主题+CloudFlare托管">
+                        <span class="hidden-mobile">Hexo博客搭建+Fluid主题+CloudFlare托管</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
