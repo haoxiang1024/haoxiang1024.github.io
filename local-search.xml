@@ -11,6 +11,12 @@
     <content type="html"><![CDATA[<h2 id="运行模型"><a href="#运行模型" class="headerlink" title="运行模型"></a>运行模型</h2><p><code>ollama run &lt;模型名称&gt;</code></p><h2 id="创建模型"><a href="#创建模型" class="headerlink" title="创建模型"></a>创建模型</h2><p><code>ollama create &lt;模型名称&gt; -f &lt;模型文件&gt;</code></p><h2 id="查看模型"><a href="#查看模型" class="headerlink" title="查看模型"></a>查看模型</h2><p><code>ollama list</code></p><h2 id="删除模型"><a href="#删除模型" class="headerlink" title="删除模型"></a>删除模型</h2><p> <code>ollama rm &lt;模型名称&gt;</code></p>]]></content>
     
     
+    <categories>
+      
+      <category>ollama</category>
+      
+    </categories>
+    
     
     <tags>
       
