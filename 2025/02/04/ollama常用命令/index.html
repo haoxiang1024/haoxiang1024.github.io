@@ -19,24 +19,22 @@
   <meta name="author" content="haoxiang">
   <meta name="keywords" content="">
   
-    <meta name="description" content="记录windows环境下搭建开发环境">
+    <meta name="description" content="运行模型ollama run &lt;模型名称&gt; 创建模型ollama create &lt;模型名称&gt; -f &lt;模型文件&gt; 查看模型ollama list 删除模型 ollama rm &lt;模型名称&gt;">
 <meta property="og:type" content="article">
-<meta property="og:title" content="windows环境下搭建开发环境（持续更新...）">
-<meta property="og:url" content="https://haoxiang1024-github-io.pages.dev/2025/01/14/windows%E7%8E%AF%E5%A2%83%E4%B8%8B%E6%90%AD%E5%BB%BA%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%EF%BC%88%E6%8C%81%E7%BB%AD%E6%9B%B4%E6%96%B0-%EF%BC%89/index.html">
+<meta property="og:title" content="ollama常用命令">
+<meta property="og:url" content="https://haoxiang1024-github-io.pages.dev/2025/02/04/ollama%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/index.html">
 <meta property="og:site_name" content="haoxiang的博客">
-<meta property="og:description" content="记录windows环境下搭建开发环境">
+<meta property="og:description" content="运行模型ollama run &lt;模型名称&gt; 创建模型ollama create &lt;模型名称&gt; -f &lt;模型文件&gt; 查看模型ollama list 删除模型 ollama rm &lt;模型名称&gt;">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://haoxiang1024-github-io.pages.dev/img/win10.png">
-<meta property="article:published_time" content="2025-01-14T05:10:01.000Z">
-<meta property="article:modified_time" content="2025-01-23T02:12:05.814Z">
+<meta property="article:published_time" content="2025-02-04T12:27:51.000Z">
+<meta property="article:modified_time" content="2025-02-04T12:32:36.599Z">
 <meta property="article:author" content="haoxiang">
-<meta property="article:tag" content="windows">
+<meta property="article:tag" content="ollama">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://haoxiang1024-github-io.pages.dev/img/win10.png">
   
   
   
-  <title>windows环境下搭建开发环境（持续更新...） - haoxiang的博客</title>
+  <title>ollama常用命令 - haoxiang的博客</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -206,7 +204,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="windows环境下搭建开发环境（持续更新...）"></span>
+            <span id="subtitle" data-typed-text="ollama常用命令"></span>
           
         </div>
 
@@ -217,8 +215,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2025-01-14 13:10" pubdate>
-          2025年1月14日 下午
+        <time datetime="2025-02-04 20:27" pubdate>
+          2025年2月4日 晚上
         </time>
       </span>
     
@@ -229,7 +227,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          1k 字
+          44 字
         
       </span>
     
@@ -240,7 +238,7 @@
         
         
         
-          9 分钟
+          1 分钟
         
       </span>
     
@@ -290,84 +288,15 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">windows环境下搭建开发环境（持续更新...）</h1>
+            <h1 id="seo-header">ollama常用命令</h1>
             
             
               <div class="markdown-body">
                 
-                <h1 id="windows环境下搭建开发环境（持续更新…）"><a href="#windows环境下搭建开发环境（持续更新…）" class="headerlink" title="windows环境下搭建开发环境（持续更新…）"></a>windows环境下搭建开发环境（持续更新…）</h1><h2 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h2><ol>
-<li><a href="#%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85">环境安装</a></li>
-<li><a href="#%E6%9E%84%E5%BB%BA%E5%B7%A5%E5%85%B7">构建工具</a></li>
-<li><a href="#%E5%8F%82%E8%80%83%E8%B5%84%E6%96%99">参考资料</a></li>
-</ol>
-<h2 id="环境介绍"><a href="#环境介绍" class="headerlink" title="环境介绍"></a>环境介绍</h2><p>Windows 10 专业版 22H2 19045.5247</p>
-<h2 id="环境安装"><a href="#环境安装" class="headerlink" title="环境安装"></a>环境安装</h2><h3 id="jdk下载安装"><a href="#jdk下载安装" class="headerlink" title="jdk下载安装"></a>jdk下载安装</h3><p>以jdk17为例:</p>
-<p><a target="_blank" rel="noopener" href="https://mirrors.tuna.tsinghua.edu.cn/Adoptium/17/jdk/x64/windows/OpenJDK17U-jdk_x64_windows_hotspot_17.0.13_11.msi" title="jdk17下载链接">下载jdk17</a></p>
-<p>进行安装一直选下一步即可，修改一下安装位置</p>
-<p>验证是否安装成功</p>
-<p>打开<code>cmd</code>,运行<code>java -version</code>，出现以下界面即安装成功<br><img src="/../img/image%20copy.png" srcset="/img/loading.gif" lazyload title="查看java版本"></p>
-<h3 id="MySQL下载安装"><a href="#MySQL下载安装" class="headerlink" title="MySQL下载安装"></a>MySQL下载安装</h3><p>进入<a target="_blank" rel="noopener" href="https://dev.mysql.com/downloads/mysql/8.0.html" title="MySQL官网">MySQL官网</a></p>
-<p>选择下载适合自己系统的版本，我选择的是<code>MySQL Community Server 8.4.3 LTS</code></p>
-<p><img src="/../img/2025-01-14_17%E6%97%B6-08%E5%88%86-12%E7%A7%92.png" srcset="/img/loading.gif" lazyload title="MySQL下载"></p>
-<p>安装过程一直下一步即可，默认安装路径即可</p>
-<p>验证是否安装成功</p>
-<p>使用数据库连接工具<a target="_blank" rel="noopener" href="https://www.navicat.com.cn/download/navicat-premium-lite">Navicat Premium Lite</a></p>
-<p>新建连接能看到数据库即安装成功，首次使用需要填root密码即安装mysql时设置的密码</p>
-<h2 id="构建工具"><a href="#构建工具" class="headerlink" title="构建工具"></a>构建工具</h2><h3 id="Maven安装"><a href="#Maven安装" class="headerlink" title="Maven安装"></a>Maven安装</h3><p>下载<a target="_blank" rel="noopener" href="https://maven.apache.org/" title="maven">maven</a></p>
-<p><img src="/../img/2025-01-14_17%E6%97%B6-18%E5%88%86-04%E7%A7%92.png" srcset="/img/loading.gif" lazyload title="maven下载"></p>
-<p>点击download，选择适合自己系统的版本，我选择的是<code>apache-maven-3.9.9-bin.zip</code></p>
-<p>解压到指定目录，配置环境变量，添加<code>MAVEN_HOME</code>和<code>PATH</code></p>
-<p><code>win+q</code>搜索<code>环境变量</code>，点击<code>编辑系统环境变量</code></p>
-<p>单击<code>环境变量</code>，点击新建，输入<code>MAVEN_HOME</code>，选择解压后的maven目录，点击确定</p>
-<p><img src="/../img/2025-01-14_18%E6%97%B6-24%E5%88%86-30%E7%A7%92.png" srcset="/img/loading.gif" lazyload title="新建环境变量"></p>
-<p><img src="/../img/2025-01-14_18%E6%97%B6-26%E5%88%86-01%E7%A7%92.png" srcset="/img/loading.gif" lazyload title="配置环境变量"></p>
-<p>在<code>系统变量</code>中找到<code>Path</code></p>
-<p><img src="/../img/2025-01-14_18%E6%97%B6-28%E5%88%86-04%E7%A7%92.png" srcset="/img/loading.gif" lazyload title="Path环境变量"></p>
-<p>双击<code>Path</code>，在弹出的窗口中点击<code>新建</code>，输入<code>%MAVEN_HOME%\bin</code>，点击确定</p>
-<p><img src="/../img/2025-01-14_18%E6%97%B6-29%E5%88%86-52%E7%A7%92.png" srcset="/img/loading.gif" lazyload title="配置Path环境变量"></p>
-<p>验证是否安装成功<br>打开<code>cmd</code>，运行<code>mvn -version</code>，出现以下界面即安装成功</p>
-<p><img src="/../img/2025-01-14_18%E6%97%B6-31%E5%88%86-23%E7%A7%92.png" srcset="/img/loading.gif" lazyload title="查看maven版本"></p>
-<p>本地仓库配置以及镜像加速</p>
-<p>配置本地仓库，新建一个文件夹，如<code>D:\Env\mavenRepo</code></p>
-<p>在<code>D:\Env\apache-maven-3.9.9\conf</code>目录下找到<code>settings.xml</code>文件，修改以下内容：</p>
-<p>找到<code>localRepository</code>标签，在注释外添加：</p>
-<p><code>&lt;localRepository&gt;D:\Env\mavenRepo&lt;/localRepository&gt;</code></p>
-<p><img src="/../img/2025-01-14_18%E6%97%B6-37%E5%88%86-03%E7%A7%92.png" srcset="/img/loading.gif" lazyload title="配置本地仓库"></p>
-<p>找到<code>mirrors</code> 标签</p>
-<p><img src="/../img/2025-01-14_18%E6%97%B6-39%E5%88%86-47%E7%A7%92.png" srcset="/img/loading.gif" lazyload title="配置镜像"></p>
-<p>添加以下内容：</p>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs xml"><span class="hljs-comment">&lt;!-- 阿里云仓库 --&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">mirror</span>&gt;</span><br>	<span class="hljs-tag">&lt;<span class="hljs-name">id</span>&gt;</span>alimaven<span class="hljs-tag">&lt;/<span class="hljs-name">id</span>&gt;</span><br>	<span class="hljs-tag">&lt;<span class="hljs-name">mirrorOf</span>&gt;</span>central<span class="hljs-tag">&lt;/<span class="hljs-name">mirrorOf</span>&gt;</span><br>	<span class="hljs-tag">&lt;<span class="hljs-name">name</span>&gt;</span>aliyun maven<span class="hljs-tag">&lt;/<span class="hljs-name">name</span>&gt;</span><br>	<span class="hljs-tag">&lt;<span class="hljs-name">url</span>&gt;</span>http://maven.aliyun.com/nexus/content/repositories/central/<span class="hljs-tag">&lt;/<span class="hljs-name">url</span>&gt;</span><br><span class="hljs-tag">&lt;/<span class="hljs-name">mirror</span>&gt;</span><br></code></pre></td></tr></table></figure>
-
-<p>配置JDK</p>
-<p>找到<code>profiles</code>标签</p>
-<p><img src="/../img/2025-01-14_18%E6%97%B6-42%E5%88%86-10%E7%A7%92.png" srcset="/img/loading.gif" lazyload title="配置JDK"></p>
-<p>添加以下内容：</p>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><code class="hljs xml"><span class="hljs-comment">&lt;!-- java版本 --&gt;</span> <br><span class="hljs-tag">&lt;<span class="hljs-name">profile</span>&gt;</span><br>	  <span class="hljs-tag">&lt;<span class="hljs-name">id</span>&gt;</span>jdk-17<span class="hljs-tag">&lt;/<span class="hljs-name">id</span>&gt;</span><br>	  <span class="hljs-tag">&lt;<span class="hljs-name">activation</span>&gt;</span><br>		<span class="hljs-tag">&lt;<span class="hljs-name">activeByDefault</span>&gt;</span>true<span class="hljs-tag">&lt;/<span class="hljs-name">activeByDefault</span>&gt;</span><br>		<span class="hljs-tag">&lt;<span class="hljs-name">jdk</span>&gt;</span>17<span class="hljs-tag">&lt;/<span class="hljs-name">jdk</span>&gt;</span><br>	  <span class="hljs-tag">&lt;/<span class="hljs-name">activation</span>&gt;</span><br> <br>	  <span class="hljs-tag">&lt;<span class="hljs-name">properties</span>&gt;</span><br>		<span class="hljs-tag">&lt;<span class="hljs-name">maven.compiler.source</span>&gt;</span>17<span class="hljs-tag">&lt;/<span class="hljs-name">maven.compiler.source</span>&gt;</span><br>		<span class="hljs-tag">&lt;<span class="hljs-name">maven.compiler.target</span>&gt;</span>17<span class="hljs-tag">&lt;/<span class="hljs-name">maven.compiler.target</span>&gt;</span><br>		<span class="hljs-tag">&lt;<span class="hljs-name">maven.compiler.compilerVersion</span>&gt;</span>17<span class="hljs-tag">&lt;/<span class="hljs-name">maven.compiler.compilerVersion</span>&gt;</span><br>	  <span class="hljs-tag">&lt;/<span class="hljs-name">properties</span>&gt;</span><br><span class="hljs-tag">&lt;/<span class="hljs-name">profile</span>&gt;</span><br></code></pre></td></tr></table></figure>
-
-<p>修改完成后进行保存</p>
-<p>验证是否配置成功</p>
-<p><code>win+R</code>快捷键运行<code>cmd</code>，输入<code>mvn help:system</code>测试：</p>
-<p><img src="/../img/2025-01-14_18%E6%97%B6-44%E5%88%86-35%E7%A7%92.png" srcset="/img/loading.gif" lazyload title="测试maven配置"></p>
-<p>说明成功了</p>
-<h3 id="Gradle安装"><a href="#Gradle安装" class="headerlink" title="Gradle安装"></a>Gradle安装</h3><p><code>win+R</code>快捷键运行<code>cmd</code>，输入<code>java -version</code>查看JDK安装信息，如果有说明JDK安装成功可以进行下一步</p>
-<p>下载Gradle</p>
-<p>采用阿里云镜像下载Gradle，<a target="_blank" rel="noopener" href="https://mirrors.aliyun.com/gradle/distributions/v8.11.1/gradle-8.11.1-all.zip" title="gradle-8.11.1">gradle-8.11.1下载地址</a></p>
-<p>解压到指定目录，配置环境变量，添加<code>GRADLE_HOME</code>和<code>PATH</code></p>
-<p><code>win+q</code>搜索<code>环境变量</code>，点击<code>编辑系统环境变量</code></p>
-<p>单击<code>环境变量</code>，点击新建，输入<code>GRADLE_HOME</code>，选择解压后的gradle目录，点击确定</p>
-<p>双击打开<code>Path</code>，在弹出的窗口中点击<code>新建</code>，输入<code>%GRADLE_HOME%\bin</code>，点击确定</p>
-<p>验证Gradle是否安装成功：按Win和R键，输入<code>cmd</code>打开命令提示行。输入<code>gradle -v</code>，如果有下面的版本说明Gradle环境变量配置成功：</p>
-<p><img src="/../img/2025-01-14_18%E6%97%B6-55%E5%88%86-34%E7%A7%92.png" srcset="/img/loading.gif" lazyload title="gradle版本"></p>
-<p>配置下载源</p>
-<p>打开文件夹<code>D:\Env\gradle-8.11.1\init.d&#39;，新建</code>init.gradle&#96;文件，添加以下内容：</p>
-<figure class="highlight fsharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><code class="hljs fsharp"><span class="hljs-keyword">allprojects</span> &#123;<br>    <span class="hljs-keyword">repositories</span> &#123; <br>        mavenLocal() <br>        <span class="hljs-keyword">maven</span> &#123; name <span class="hljs-string">&quot;Alibaba&quot;</span> ; url <span class="hljs-string">&quot;https://maven.aliyun.com/repository/public&quot;</span> &#125; <br>        <span class="hljs-keyword">maven</span> &#123; name <span class="hljs-string">&quot;Bstek&quot;</span> ; url <span class="hljs-string">&quot;https://nexus.bsdn.org/content/groups/public/&quot;</span> &#125; <br>        mavenCentral()<br>    &#125;<br>    <span class="hljs-keyword">buildscript</span> &#123;<br>        <span class="hljs-keyword">repositories</span> &#123; <br>            <span class="hljs-keyword">maven</span> &#123; name <span class="hljs-string">&quot;Alibaba&quot;</span> ; url <span class="hljs-symbol">&#x27;https</span><span class="hljs-operator">:</span><span class="hljs-comment">//maven.aliyun.com/repository/public&#x27; &#125; </span><br>            <span class="hljs-keyword">maven</span> &#123; name <span class="hljs-string">&quot;Bstek&quot;</span> ; url <span class="hljs-symbol">&#x27;https</span><span class="hljs-operator">:</span><span class="hljs-comment">//nexus.bsdn.org/content/groups/public/&#x27; &#125; </span><br>            <span class="hljs-keyword">maven</span> &#123; name <span class="hljs-string">&quot;M2&quot;</span> ; url <span class="hljs-symbol">&#x27;https</span><span class="hljs-operator">:</span><span class="hljs-comment">//plugins.gradle.org/m2/&#x27; &#125;</span><br>        &#125;<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
-<p>配置环境变量<code>GRADLE_USER_HOME</code>，对应Gradle本地仓库或工作空间目录（自已创建的指定目录）</p>
-<p><img src="/../img/2025-01-14_18%E6%97%B6-58%E5%88%86-03%E7%A7%92.png" srcset="/img/loading.gif" lazyload title="配置GRADLE_USER_HOME"></p>
-<p>IDEA 配置Gradle</p>
-<p><img src="/../img/2025-01-14_18%E6%97%B6-59%E5%88%86-11%E7%A7%92.png" srcset="/img/loading.gif" lazyload title="IDEA配置Gradle"></p>
-<p>点击确定，配置成功，<strong>新建项目的设置也修改一下</strong></p>
-<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><p><a target="_blank" rel="noopener" href="https://blog.csdn.net/m0_73804764/article/details/139898041" title="（2024.6.23）最新版MAVEN的安装和配置教程（超详细）">（2024.6.23）最新版MAVEN的安装和配置教程（超详细）</a></p>
-<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_43331014/article/details/144644970" title="Gradle安装配置详细教程(Spring源码可用)">Gradle安装配置详细教程(Spring源码可用)</a></p>
+                <h2 id="运行模型"><a href="#运行模型" class="headerlink" title="运行模型"></a>运行模型</h2><p><code>ollama run &lt;模型名称&gt;</code></p>
+<h2 id="创建模型"><a href="#创建模型" class="headerlink" title="创建模型"></a>创建模型</h2><p><code>ollama create &lt;模型名称&gt; -f &lt;模型文件&gt;</code></p>
+<h2 id="查看模型"><a href="#查看模型" class="headerlink" title="查看模型"></a>查看模型</h2><p><code>ollama list</code></p>
+<h2 id="删除模型"><a href="#删除模型" class="headerlink" title="删除模型"></a>删除模型</h2><p> <code>ollama rm &lt;模型名称&gt;</code></p>
 
                 
               </div>
@@ -376,32 +305,11 @@
             <div>
               <div class="post-metas my-3">
   
-    <div class="post-meta mr-3 d-flex align-items-center">
-      <i class="iconfont icon-category"></i>
-      
-
-<span class="category-chains">
-  
-  
-    
-      <span class="category-chain">
-        
-  <a href="/categories/windows/" class="category-chain-item">windows</a>
-  
-  
-
-      </span>
-    
-  
-</span>
-
-    </div>
-  
   
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/windows/" class="print-no-link">#windows</a>
+        <a href="/tags/ollama/" class="print-no-link">#ollama</a>
       
     </div>
   
@@ -413,8 +321,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>windows环境下搭建开发环境（持续更新...）</div>
-      <div>https://haoxiang1024-github-io.pages.dev/2025/01/14/windows环境下搭建开发环境（持续更新-）/</div>
+      <div>ollama常用命令</div>
+      <div>https://haoxiang1024-github-io.pages.dev/2025/02/04/ollama常用命令/</div>
     </div>
     <div class="license-meta">
       
@@ -426,7 +334,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2025年1月14日</div>
+          <div>2025年2月4日</div>
         </div>
       
       
@@ -458,18 +366,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2025/02/04/ollama%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/" title="ollama常用命令">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">ollama常用命令</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2025/01/12/linux%E5%88%9D%E6%AC%A1%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE/" title="linux初次安装配置">
-                        <span class="hidden-mobile">linux初次安装配置</span>
+                      <a href="/2025/01/14/windows%E7%8E%AF%E5%A2%83%E4%B8%8B%E6%90%AD%E5%BB%BA%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%EF%BC%88%E6%8C%81%E7%BB%AD%E6%9B%B4%E6%96%B0-%EF%BC%89/" title="windows环境下搭建开发环境（持续更新...）">
+                        <span class="hidden-mobile">windows环境下搭建开发环境（持续更新...）</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>

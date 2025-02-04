@@ -4,6 +4,25 @@
   
   
   <entry>
+    <title>ollama常用命令</title>
+    <link href="/2025/02/04/ollama%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/"/>
+    <url>/2025/02/04/ollama%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</url>
+    
+    <content type="html"><![CDATA[<h2 id="运行模型"><a href="#运行模型" class="headerlink" title="运行模型"></a>运行模型</h2><p><code>ollama run &lt;模型名称&gt;</code></p><h2 id="创建模型"><a href="#创建模型" class="headerlink" title="创建模型"></a>创建模型</h2><p><code>ollama create &lt;模型名称&gt; -f &lt;模型文件&gt;</code></p><h2 id="查看模型"><a href="#查看模型" class="headerlink" title="查看模型"></a>查看模型</h2><p><code>ollama list</code></p><h2 id="删除模型"><a href="#删除模型" class="headerlink" title="删除模型"></a>删除模型</h2><p> <code>ollama rm &lt;模型名称&gt;</code></p>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>ollama</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>windows环境下搭建开发环境（持续更新...）</title>
     <link href="/2025/01/14/windows%E7%8E%AF%E5%A2%83%E4%B8%8B%E6%90%AD%E5%BB%BA%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%EF%BC%88%E6%8C%81%E7%BB%AD%E6%9B%B4%E6%96%B0-%EF%BC%89/"/>
     <url>/2025/01/14/windows%E7%8E%AF%E5%A2%83%E4%B8%8B%E6%90%AD%E5%BB%BA%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%EF%BC%88%E6%8C%81%E7%BB%AD%E6%9B%B4%E6%96%B0-%EF%BC%89/</url>
